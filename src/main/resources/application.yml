@@ -1,0 +1,32 @@
+server:
+  port: 9192
+
+spring:
+  application:
+    name: API15_SEND_MAIL
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/testdb
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver    
+  jpa:
+    show-sql: true
+      
+    
+    
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: 
+      defaultzone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+    
+    
+      
+      
+     
+         
