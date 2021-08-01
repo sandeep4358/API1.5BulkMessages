@@ -12,7 +12,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table
+@Table(name = "apidetails_bean")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

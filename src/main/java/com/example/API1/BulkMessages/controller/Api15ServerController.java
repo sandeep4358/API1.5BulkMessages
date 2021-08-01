@@ -42,4 +42,20 @@ public class Api15ServerController {
 		
 		return result;
 	}
+	
+	@PostMapping(path = "/getServerDeatils")
+	public APIDetailsBean getMailServerDeatils(@RequestBody APIDetailsBean bean) {		
+		
+		Optional<APIDetailsBean> optional = Optional.ofNullable(service.getServerDetails(bean.getMailServerId()));
+		APIDetailsBean apiDetailsBean = null;
+		if(optional.isPresent()) {
+			apiDetailsBean = optional.get();		
+			apiDetailsBean = service.getServerDetails(apiDetailsBean.getMailServerId());
+		}else {
+			apiDetailsBean = new APIDetailsBean();
+			apiDetailsBean.setApiDescription("Error :-- No mail server present");
+		}
+		
+		return apiDetailsBean;
+	}
 }

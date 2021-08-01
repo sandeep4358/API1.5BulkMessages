@@ -20,4 +20,8 @@ public class Api15SendEmailService {
 		return repository.save(details);
 	}
 	
+	public APIDetailsBean getServerInfo(APIDetailsBean details) {
+		return repository.save(details);
+	}
+	
 }
